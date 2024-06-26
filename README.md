@@ -1,10 +1,6 @@
 # SpotIT
 
-A demo application using Streamlit, OpenCV, and MediaPipe.
-
-## Overview
-
-SpotIT is a real-time computer vision application that demonstrates the use of MediaPipe and OpenCV for gesture recognition and blink detection. 
+SpotIT is a real-time computer vision application that demonstrates the use of [MediaPipe](https://github.com/google-ai-edge/mediapipe) and [OpenCV](https://opencv.org/) for gesture recognition and blink detection. Web interface build with [Streamlit](https://streamlit.io/).
 
 ## Features
 
