@@ -9,13 +9,13 @@ class GestureDetector:
         self.base_options = python.BaseOptions(model_asset_path=model_path)
         self.options = vision.GestureRecognizerOptions(base_options=self.base_options,num_hands=2)
         self.detector = vision.GestureRecognizer.create_from_options(self.options)
-        self.results = []
+        
 
     def detect_gestures_in_file(self, image_path):
         return self.detect_gestures(cv2.imread(image_path))
 
-    def detect_gestures(self, image):
-        self.results = []
+    def detect_gestures(self, image,max_hands=2):
+        results = []
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=image_rgb)
         detection_result = self.detector.recognize(mp_image)
@@ -24,15 +24,17 @@ class GestureDetector:
             if gesture:
                 top_gesture = gesture[0]
                 if top_gesture.category_name != "None":
-                    self.results.append({
+                    results.append({
                         "gesture_name": top_gesture.category_name,
                         "score": top_gesture.score
                     })
+            if len(results) == max_hands:
+                break 
 
-        if not self.results:
-            self.results.append({
+        if not results:
+            results.append({
                 "gesture_name": "No Gesture",
                 "score": 0.0
             })
 
-        return self.results
+        return results

@@ -31,7 +31,8 @@ This will open the application in your default web browser.
 ## Changelog
 
 - 2024-06-27
-  - Added drawing customization
+  - Added drawing options
+  - Added detection options
 - 2024-06-26
   - Initial commit
 
