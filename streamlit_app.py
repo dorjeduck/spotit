@@ -35,22 +35,29 @@ st.title("Spot IT")
 st.sidebar.title("Controls")
 
 def toggle_webcam():
-    st.session_state.run_webcam = not st.session_state.run_webcam
     if st.session_state.run_webcam:
-        st.session_state.cap = cv2.VideoCapture(0)
-    else:
-        if st.session_state.cap:
+        st.session_state.run_webcam = False
+        if st.session_state.cap is not None:
             st.session_state.cap.release()
             st.session_state.cap = None
             cv2.destroyAllWindows()
+    else:
+        st.session_state.run_webcam = True
+        st.session_state.cap = cv2.VideoCapture(0)
+        if not st.session_state.cap.isOpened():
+            st.session_state.run_webcam = False
+            st.session_state.cap = None
+            st.error("Failed to access webcam")
 
 # Create the buttons and checkboxes
+st.sidebar.text("")
 toggle_webcam_button = st.sidebar.button("Stop Webcam" if st.session_state.run_webcam else "Start Webcam", on_click=toggle_webcam)
+st.sidebar.text("")
 draw_face_landmarks_checkbox = st.sidebar.checkbox('Draw Face Landmarks')
 draw_hand_landmarks_checkbox = st.sidebar.checkbox('Draw Hand Landmarks')
 detect_gestures_checkbox = st.sidebar.checkbox('Detect Gestures')
 detect_blinks_checkbox = st.sidebar.checkbox('Detect Blinks')
-
+st.sidebar.markdown("***")
 # Add an expander for customizable options
 with st.sidebar.expander("Customize Detection Options"):
     st.session_state.max_num_faces = st.radio("Max Number of Faces", [1, 2], index=0)
