@@ -34,7 +34,7 @@ SpotIT is a real-time computer vision application that demonstrates the use of [
   
 ## Installation
 
-To install the necessary dependencies, run:
+Ensure you have Python >= 3.9 installed. To install the necessary dependencies, run:
 
 ```bash
 pip install -r requirements.txt
