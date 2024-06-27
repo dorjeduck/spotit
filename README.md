@@ -7,31 +7,30 @@ SpotIT is a real-time computer vision application that demonstrates the use of [
 - **Real-time Gesture Recognition:** Detects various hand gestures using MediaPipe.
 - **Blink Detection:** Detects eye blinks by calculating the Eye Aspect Ratios (EAR) and blendshape scores.
 
+![SpotIT](imgs/demo.png)
 
-## Customizable 
+## Customizable
 
-- Webcam Control: Start or stop the webcam feed.
-- Display Options:
+- **Webcam Control:** Start or stop the webcam feed.
+- **Display Options:**
   - Toggle the display of face landmarks.
   - Toggle the display of hand landmarks.
-- Gesture and Blink Detection:
+- **Gesture and Blink Detection:**
   - Enable or disable gesture detection.
   - Enable or disable blink detection.
-- Detection Options:
+- **Detection Options:**
   - **Max Number of Faces:** Choose to detect 1 or 2 faces.
   - **Max Number of Hands:** Choose to detect 1 or 2 hands.
   - **Face Min Detection Confidence:** Adjust the minimum confidenc threshold for face detection (0.0 to 1.0).
   - **Hand Min Detection Confidence:** Adjust the minimum confidence threshold for hand detection (0.0 to 1.0).
   - **EAR Threshold:** Set the Eye Aspect Ratio (EAR) threshold for blink detection (0.0 to 1.0). A value below this threshold indicates a blink.
   - **Blendshape Blink Score Threshold:** Set the blendshape blink score threshold for blink detection (0.0 to 1.0). A value above this threshold indicates a blink.
-- Drawing Specifications:
+- **Drawing Specifications:**
   - Customize the thickness, circle radius, and color of face landmarks.
   - Customize the thickness and color of face connections.
   - Customize the thickness, circle radius, and color of hand landmarks.
   - Customize the thickness and color of hand connections.
   
-![SpotIT](imgs/demo.png)
-
 ## Installation
 
 To install the necessary dependencies, run:
