@@ -4,7 +4,7 @@ SpotIT is a real-time computer vision application that demonstrates the use of [
 
 ## Features
 
-- **Real-time Gesture Recognition:** Detects various hand gestures using MediaPipe.
+- **Real-time Gesture Recognition:** Detects various hand gestures using MediaPipe. (i.e. 👍, 👎, ✌️, ☝️, ✊, 👋, 🤟) 
 - **Blink Detection:** Detects eye blinks by calculating the Eye Aspect Ratios (EAR) and blendshape scores.
 - **Face and Hand Landmark Visualization:** Displays the face and hand landmarks and mesh as recognized by MediaPipe.
 
