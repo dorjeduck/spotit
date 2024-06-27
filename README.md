@@ -10,7 +10,7 @@ SpotIT is a real-time computer vision application that demonstrates the use of [
 
 ![SpotIT](imgs/demo.png)
 
-## Customizable
+## Customization
 
 - **Webcam Control:** Start or stop the webcam feed.
 - **Display Options:**
