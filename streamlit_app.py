@@ -132,6 +132,7 @@ hand_connection_drawing_spec = st.session_state.mp_drawing.DrawingSpec(
 )
 
 def process_frame(frame, draw_face_landmarks, draw_hand_landmarks):
+   
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     
     if draw_face_landmarks:

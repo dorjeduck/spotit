@@ -10,7 +10,6 @@ class GestureDetector:
         self.options = vision.GestureRecognizerOptions(base_options=self.base_options,num_hands=2)
         self.detector = vision.GestureRecognizer.create_from_options(self.options)
         
-
     def detect_gestures_in_file(self, image_path):
         return self.detect_gestures(cv2.imread(image_path))
 

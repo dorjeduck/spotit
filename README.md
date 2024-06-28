@@ -42,7 +42,9 @@ pip install -r requirements.txt
 
 ## Usage
 
-To start the application, run:
+### Running Locally
+
+To start the application locally, run:
 
 ```bash
 streamlit run streamlit_app.py
@@ -50,8 +52,20 @@ streamlit run streamlit_app.py
 
 This will open the application in your default web browser.
 
+### Running as a Shared Web App (Beta)
+
+To start the application as a shared web app, run:
+
+```bash
+streamlit run streamlit_web_app.py
+```
+
+Note: The shared web app functionality is still in beta.
+
 ## Changelog
 
+- 2024-06-28
+  - Shared Web App version added 
 - 2024-06-27
   - Added drawing options
   - Added detection options
