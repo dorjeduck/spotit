@@ -60,7 +60,9 @@ To start the application as a shared web app, run:
 streamlit run streamlit_web_app.py
 ```
 
-Note: The shared web app functionality is still in beta.
+You can see the web app in action here:
+
+[https://spotit.streamlit.app/](https://spotit.streamlit.app/)
 
 ## Changelog
 
